@@ -1,0 +1,224 @@
+body {
+    background-color: #282828; /*cor de fundo*/
+    color: #fff; /*fonte*/
+}
+
+.cabecalho {
+    height: 80px; /*altura*/
+    background-color: #0b0b0b;
+    display: flex; 
+    justify-content: space-between; /*alinha na horizontal, joga pro lado*/
+    align-items: center; /*alinha na vertical*/
+    padding: 0 80px; /*espaçamento*/
+    border-bottom: 1px solid #282828; /*borda embaixo*/
+}
+
+.cabecalho .logo {
+    display: flex;
+    gap: 15px; /*espaçamento*/
+}
+
+.cabecalho .menu {
+    display: flex;
+    gap: 30px;
+}
+
+.cabecalho .menu li a {
+    padding: 30px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: 'Chalet';
+}
+
+.cabecalho .menu li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.home {
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+.home::after {
+    content: '';
+    position: absolute; /*vem pra cima da imagem*/
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .7) 35%, transparent 65%);
+}
+
+.home .imagem__fundo {
+    width: 100%;
+    object-fit: cover; /*adequar a imagem*/
+}
+
+.home .informacoes {
+    position: absolute;
+    z-index: 1; /*coloca as informações em cima do ngc preto*/
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centraliza no eixo vertical por causa do flex-direction*/
+    gap: 32px;
+    padding: 80px 80px 80px 170px;
+    max-width: 780px;
+}
+
+.home .informacoes img {
+    max-width: 150px;
+}
+
+.home .informacoes .lista__de__jogos {
+    display: flex;
+    gap: 32px;
+}
+
+.home .informacoes .titulo {
+    font-family: 'ChaletComprime';
+    font-size: 55px;
+}
+
+.home .informacoes .texto {
+    font-family: 'Chalet';
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn__comprar, .btn__plataforma {
+    background-color: rgba(255, 255, 255, .1);
+    border: 0.5px solid #fff;
+    border-radius: 4px;
+    font-family: 'ChaletComprime';
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 40px;
+    text-transform: uppercase; /*deixar todas as letras maiusculas*/
+    width: 50%;
+    transition: all .3s ease-in;
+}
+
+.btn__plataforma {
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn__comprar:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.compre__ja .capa__do__jogo {
+    width: 270px;
+}
+
+.compre__ja {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+}
+
+.compre__ja .titulo {
+    font-family: 'ChaletComprime';
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.compre__ja .cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    width: 50%;
+    border-radius: 10px;
+    padding: 80px;
+    gap: 40px; /*espaço entre os elementos*/
+}
+
+.compre__ja .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.compre__ja .informacoes h3 {
+    font-family: 'ChaletComprime';
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.compre__ja .informacoes p {
+    color: #e8e8e8;
+    font-family: 'Chalet';
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.compre__ja .informacoes .plataformas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*qnd faltar espaço quebra pra baixo*/
+    gap: 32px;
+}
+
+.compre__ja .btn__plataforma .plataformas {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all .3s ease-in;
+    display: none; /*so vai aparecer qnd clicar, precisa mudar no js add a classe ativo*/
+    opacity: 0;
+}
+
+.compre__ja .btn__plataforma .plataformas.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.compre__ja .btn__plataforma .plataformas li {
+    padding: 20px;
+}
+
+.compre__ja  .btn__plataforma .plataformas li:nth-child(1){
+    border: 1px solid #00439c;
+}
+
+.compre__ja  .btn__plataforma .plataformas li:nth-child(1):hover{
+    background-color: #00439c;
+}
+.compre__ja  .btn__plataforma .plataformas li:nth-child(2){
+    border: 1px solid #387a26;
+}
+
+.compre__ja  .btn__plataforma .plataformas li:nth-child(2):hover{
+    background-color: #387a26;
+}
+
+.compre__ja .btn__plataforma .plataformas li:nth-child(3) {
+    border: 1px solid #00439c;
+}
+
+.compre__ja .btn__plataforma .plataformas li:nth-child(3):hover {
+    background-color: #00439c;
+}
+
+.compre__ja .btn__plataforma .plataformas li:nth-child(4) {
+    border: 1px solid #387a26; 
+}
+
+.compre__ja .btn__plataforma .plataformas li:nth-child(4):hover {
+    background-color: #387a26;
+}
+.compre__ja .btn__plataforma .plataformas li:nth-child(5) {
+    border: 1px solid #fcaf17; 
+}
+
+.compre__ja .btn__plataforma .plataformas li:nth-child(5):hover {
+    background-color: #fcaf17;
+}
